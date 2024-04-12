@@ -7,23 +7,20 @@
   </head>
   <body>
     <form id="loginForm">
-      FirstName:<input type="text" name="fname" value="name" /> LastName:<input
-        type="text"
-        name="lname"
-        value="atak"
-      />
-      <input type="submit" vale="Submit" />
+      FirstName:<input type="text" name="fname" value="name" /><br /><br />
+      LastName:<input type="text" name="lname" value="atak" />
+      <input type="submit" vale="Submit" /><br /><br />
     </form>
     <p>Click the "Try it" to display element</p>
-    <button onclick="myFunction()"></button>
+    <button onclick="myFunction()">Try It</button>
     <p id="space"></p>
   </body>
   <script>
     function myFunction() {
       let x = document.getElementById("loginForm").elements.length;
-      let y = document.getElementById("loginForm").elements[0].value;
+      let y = document.getElementById("loginForm").elements[2].value;
       document.getElementById("space").innerHTML =
-        "Found" + x + "element in the Form." + "First name is:-" + y;
+        "Found" + x + " element in the Form." + "First name is:-" + y;
     }
   </script>
 </html>
