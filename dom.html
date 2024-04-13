@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <br />
+
+    <b>FirstNumber</b>:-
+    <input type="text" id="first" placeholder="FirstNumber" />
+    <br /><br />
+    <b>SecondNumber</b>:-
+    <input type="text" id="second" placeholder="Second Number" /> <br /><br />
+    <button onclick="addNumber()">Add</button>
+    <br />
+    <p class="sum"></p>
+  </body>
+  <script>
+    function addNumber() {
+      let x = parseInt(document.getElementById("first").value);
+      let y = parseInt(document.getElementById("second").value);
+      let z = x + y;
+      document.querySelector(".sum").innerHTML =
+        "The sum of " + x + "and " + y + " is:- " + z;
+    }
+  </script>
+</html>
