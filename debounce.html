@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <br />
+
+    <b>FirstNumber</b>:-
+    <input type="text" id="first" placeholder="FirstNumber" />
+    <br /><br />
+    <b>SecondNumber</b>:-
+    <input type="text" id="second" placeholder="Second Number" /> <br /><br />
+    <button onclick="addNumber()">Add</button>
+    <br />
+    <p class="sum"></p>
+  </body>
+  <script>
+    let timeout;
+    function debounce() {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        populateDiv();
+      }, 100);
+      clearTimeout(timeout);
+    }
+    async function populateDiv() {
+      let a = parseInt(document.getElementById("first").value);
+      let b = parseInt(document.getElementById("second").value);
+      const response = await fetch(
+        "http://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b
+      );
+      const ans = await respinse.text();
+      document.getElementById().innerHTML = ans;
+    }
+  </script>
+</html>
