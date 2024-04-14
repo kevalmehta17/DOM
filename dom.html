@@ -18,12 +18,17 @@
     <p class="sum"></p>
   </body>
   <script>
-    function addNumber() {
-      let x = parseInt(document.getElementById("first").value);
-      let y = parseInt(document.getElementById("second").value);
-      let z = x + y;
-      document.querySelector(".sum").innerHTML =
-        "The sum of " + x + "and " + y + " is:- " + z;
+    async function addNumber() {
+      let a = parseInt(document.getElementById("first").value);
+      let b = parseInt(document.getElementById("second").value);
+      const response = await fetch(
+        "http://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b
+      );
+      const ans = await respinse.text();
+      document.getElementById().innerHTML = ans;
+      // let z = x + y;
+      // document.querySelector(".sum").innerHTML =
+      //   "The sum of " + x + "and " + y + " is:- " + z;
     }
   </script>
 </html>
