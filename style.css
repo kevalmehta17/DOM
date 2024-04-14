@@ -1,0 +1,10 @@
+* {
+  background-color: gray;
+}
+.first {
+  background-color: aqua;
+  padding: 10px;
+  margin: 5px;
+  font-size: 25px;
+  text-align: center;
+}
